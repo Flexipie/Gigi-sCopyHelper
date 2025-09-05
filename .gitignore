@@ -1,0 +1,54 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode
+build/
+DerivedData/
+
+# User-specific files
+*.swp
+*.lock
+*.xcuserstate
+xcuserdata/
+
+# Xcode project user data
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# IDEs
+.idea/
+.vscode/
+
+# Archives
+*.moved-aside
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Logs
+*.log
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# App artifacts (keep app project files, ignore transient)
+GigiCopyHelper.xcodeproj/xcuserdata/
+GigiCopyHelper.xcodeproj/project.xcworkspace/xcuserdata/

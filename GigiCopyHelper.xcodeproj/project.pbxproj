@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		433717CD2E6B261500C1F1CA /* GigiCopyNMHost in CopyFiles */ = {isa = PBXBuildFile; fileRef = 433717C12E6B20A600C1F1CA /* GigiCopyNMHost */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		439EBD732E6A244C0060FBC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -23,13 +27,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		433717BF2E6B20A600C1F1CA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		433717CC2E6B25EE00C1F1CA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				433717CD2E6B261500C1F1CA /* GigiCopyNMHost in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		433717C12E6B20A600C1F1CA /* GigiCopyNMHost */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GigiCopyNMHost; sourceTree = BUILT_PRODUCTS_DIR; };
+		433717C82E6B21F200C1F1CA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		439EBD642E6A244B0060FBC1 /* GigiCopyHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigiCopyHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439EBD722E6A244C0060FBC1 /* GigiCopyHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GigiCopyHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		439EBD7C2E6A244C0060FBC1 /* GigiCopyHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GigiCopyHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		433717C22E6B20A600C1F1CA /* GigiCopyNMHost */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GigiCopyNMHost;
+			sourceTree = "<group>";
+		};
 		439EBD662E6A244B0060FBC1 /* GigiCopyHelper */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = GigiCopyHelper;
@@ -48,6 +81,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		433717BE2E6B20A600C1F1CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		439EBD612E6A244B0060FBC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,12 +112,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		433717C92E6B21F200C1F1CA /* NativeHost */ = {
+			isa = PBXGroup;
+			children = (
+				433717C82E6B21F200C1F1CA /* main.swift */,
+			);
+			path = NativeHost;
+			sourceTree = "<group>";
+		};
 		439EBD5B2E6A244B0060FBC1 = {
 			isa = PBXGroup;
 			children = (
+				433717C92E6B21F200C1F1CA /* NativeHost */,
 				439EBD662E6A244B0060FBC1 /* GigiCopyHelper */,
 				439EBD752E6A244C0060FBC1 /* GigiCopyHelperTests */,
 				439EBD7F2E6A244C0060FBC1 /* GigiCopyHelperUITests */,
+				433717C22E6B20A600C1F1CA /* GigiCopyNMHost */,
 				439EBD652E6A244B0060FBC1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +138,7 @@
 				439EBD642E6A244B0060FBC1 /* GigiCopyHelper.app */,
 				439EBD722E6A244C0060FBC1 /* GigiCopyHelperTests.xctest */,
 				439EBD7C2E6A244C0060FBC1 /* GigiCopyHelperUITests.xctest */,
+				433717C12E6B20A600C1F1CA /* GigiCopyNMHost */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +146,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		433717C02E6B20A600C1F1CA /* GigiCopyNMHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 433717C72E6B20A600C1F1CA /* Build configuration list for PBXNativeTarget "GigiCopyNMHost" */;
+			buildPhases = (
+				433717BD2E6B20A600C1F1CA /* Sources */,
+				433717BE2E6B20A600C1F1CA /* Frameworks */,
+				433717BF2E6B20A600C1F1CA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				433717C22E6B20A600C1F1CA /* GigiCopyNMHost */,
+			);
+			name = GigiCopyNMHost;
+			packageProductDependencies = (
+			);
+			productName = GigiCopyNMHost;
+			productReference = 433717C12E6B20A600C1F1CA /* GigiCopyNMHost */;
+			productType = "com.apple.product-type.tool";
+		};
 		439EBD632E6A244B0060FBC1 /* GigiCopyHelper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 439EBD862E6A244C0060FBC1 /* Build configuration list for PBXNativeTarget "GigiCopyHelper" */;
@@ -102,6 +175,7 @@
 				439EBD602E6A244B0060FBC1 /* Sources */,
 				439EBD612E6A244B0060FBC1 /* Frameworks */,
 				439EBD622E6A244B0060FBC1 /* Resources */,
+				433717CC2E6B25EE00C1F1CA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -173,6 +247,9 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					433717C02E6B20A600C1F1CA = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					439EBD632E6A244B0060FBC1 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -203,6 +280,7 @@
 				439EBD632E6A244B0060FBC1 /* GigiCopyHelper */,
 				439EBD712E6A244C0060FBC1 /* GigiCopyHelperTests */,
 				439EBD7B2E6A244C0060FBC1 /* GigiCopyHelperUITests */,
+				433717C02E6B20A600C1F1CA /* GigiCopyNMHost */,
 			);
 		};
 /* End PBXProject section */
@@ -232,6 +310,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		433717BD2E6B20A600C1F1CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		439EBD602E6A244B0060FBC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,6 +354,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		433717C52E6B20A600C1F1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LLMF56SBL3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		433717C62E6B20A600C1F1CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LLMF56SBL3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		439EBD842E6A244C0060FBC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -396,8 +503,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LLMF56SBL3;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -421,8 +531,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LLMF56SBL3;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -504,6 +617,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		433717C72E6B20A600C1F1CA /* Build configuration list for PBXNativeTarget "GigiCopyNMHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433717C52E6B20A600C1F1CA /* Debug */,
+				433717C62E6B20A600C1F1CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		439EBD5F2E6A244B0060FBC1 /* Build configuration list for PBXProject "GigiCopyHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
