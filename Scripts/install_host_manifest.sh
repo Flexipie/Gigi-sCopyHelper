@@ -74,11 +74,20 @@ if [[ ! -x "$HOST_BIN" ]]; then
   exit 1
 fi
 
-declare -A TARGET_DIRS
-TARGET_DIRS[chrome]="$HOME/Library/Application Support/Google/Chrome/NativeMessagingHosts"
-TARGET_DIRS[canary]="$HOME/Library/Application Support/Google/Chrome Canary/NativeMessagingHosts"
-TARGET_DIRS[brave]="$HOME/Library/Application Support/BraveSoftware/Brave-Browser/NativeMessagingHosts"
-TARGET_DIRS[edge]="$HOME/Library/Application Support/Microsoft Edge/NativeMessagingHosts"
+dest_dir_for() {
+  case "$1" in
+    chrome)
+      echo "$HOME/Library/Application Support/Google/Chrome/NativeMessagingHosts";;
+    canary)
+      echo "$HOME/Library/Application Support/Google/Chrome Canary/NativeMessagingHosts";;
+    brave)
+      echo "$HOME/Library/Application Support/BraveSoftware/Brave-Browser/NativeMessagingHosts";;
+    edge)
+      echo "$HOME/Library/Application Support/Microsoft Edge/NativeMessagingHosts";;
+    *)
+      return 1;;
+  esac
+}
 
 write_manifest() {
   local dest_dir="$1"
@@ -101,11 +110,13 @@ JSON
 case "$BROWSER" in
   all)
     for key in chrome canary brave edge; do
-      write_manifest "${TARGET_DIRS[$key]}"
+      dir="$(dest_dir_for "$key")" || { echo "[WARN] Unknown browser key: $key"; continue; }
+      write_manifest "$dir"
     done
     ;;
   chrome|canary|brave|edge)
-    write_manifest "${TARGET_DIRS[$BROWSER]}"
+    dir="$(dest_dir_for "$BROWSER")" || { echo "[ERROR] Unknown browser: $BROWSER"; exit 1; }
+    write_manifest "$dir"
     ;;
   *)
     echo "[ERROR] Unknown browser: $BROWSER"; exit 1;;
