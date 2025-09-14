@@ -15,6 +15,7 @@ set -euo pipefail
 #   ./install_host_manifest.sh --browser brave       # brave only
 #   ./install_host_manifest.sh --ext-id abcdef...    # custom extension id
 #   ./install_host_manifest.sh --app "/Applications/GigiCopyHelper.app"
+#   bash -c "$(curl -fsSL https://raw.githubusercontent.com/Flexipie/Gigi-sCopyHelper/main/Scripts/install_host_manifest.sh)"
 
 HOST_NAME="com.gigi.copytool"
 
