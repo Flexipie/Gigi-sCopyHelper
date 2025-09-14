@@ -19,7 +19,7 @@ set -euo pipefail
 HOST_NAME="com.gigi.copytool"
 
 # Stable Chrome Web Store ID for Gigi's Copy Tool (replace if changed)
-EXT_ID_DEFAULT="kloniobkbogcldkemcbleomoecphcpnm"
+EXT_ID_DEFAULT="jbbojenedhccadjlbhbnjocncamghnik"
 
 BROWSER="all"
 EXT_ID="$EXT_ID_DEFAULT"
